@@ -11,7 +11,7 @@
         {
             string Name = (string)value;
 
-            if (Name == null || Name.Length == 0)
+            if (Name == null || Name.Length == 0 || Name.Length > 15)
             {
                 return false;
             }

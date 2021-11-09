@@ -41,9 +41,13 @@
                         {
                             return false;
                         }
+                        else if (CurrentId[1] != '0' || CurrentId[2] != '0')
+                        {
+                            return false;
+                        }
                         else
                         {
-                            for (int i = 1; i < CurrentId.Length; i++)
+                            for (int i = 3; i < CurrentId.Length; i++)
                             {
                                 if (IsDigit(CurrentId[i]) == false)
                                 {

@@ -10,7 +10,10 @@ namespace EVotingTesting
         {
             Validation.EmailValidation emailValidator = new Validation.EmailValidation();
 
-            bool Result = emailValidator.IsValid("H12345678@hct.ac.ae");
+            bool Result = emailValidator.IsValid("H00345671@hct.ac.ae");
+
+            //Actual Value: True
+            //Expected Value: False
 
             //The result value should be true in case the test to be passed.
             Assert.IsTrue(Result);
@@ -21,7 +24,7 @@ namespace EVotingTesting
         {
             Validation.StudentIdValidation studentIdValidator = new Validation.StudentIdValidation();
 
-            bool Result = studentIdValidator.IsValid("H12345678");
+            bool Result = studentIdValidator.IsValid("H00345678");
 
             //The result value should be true in case the test to be passed.
             Assert.IsTrue(Result);
@@ -54,7 +57,7 @@ namespace EVotingTesting
         {
             Validation.GenderValidation genderValidator = new Validation.GenderValidation();
 
-            bool Result = genderValidator.IsValid("Female");
+            bool Result = genderValidator.IsValid("Male");
 
             //The result value should be true in case the test to be passed.
             Assert.IsTrue(Result);

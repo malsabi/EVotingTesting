@@ -19,11 +19,18 @@
             {
                 if ((StudentId[0] == 'H') || (StudentId[0] == 'h'))
                 {
-                    for (int i = 1; i < StudentId.Length; i++)
+                    if (StudentId[1] != '0' || StudentId[2] != '0')
                     {
-                        if (IsDigit(StudentId[i]) == false)
+                        return false;
+                    }
+                    else
+                    {
+                        for (int i = 1; i < StudentId.Length; i++)
                         {
-                            return false;
+                            if (IsDigit(StudentId[i]) == false)
+                            {
+                                return false;
+                            }
                         }
                     }
                 }
